@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Draw</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../css/styles.css" />
+  </head>
+
+  <body class="bg-light">
+    <nav class="navbar navbar-expand-lg bg-white border-bottom">
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="../index.html">Mini mini AR</a>
+        <div class="ms-auto d-flex gap-2">
+          <a class="btn btn-sm btn-outline-secondary" href="./summary.html">Back</a>
+        </div>
+      </div>
+    </nav>
+
+    <main class="container py-4">
+      <div class="row g-3">
+        <div class="col-12">
+          <div class="card shadow-sm">
+            <div class="card-body p-4">
+              <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-center gap-3">
+                <div>
+                  <h1 class="h4 fw-bold mb-1">Gift draw</h1>
+                  <p class="text-muted mb-0">
+                    Generate pairings and reveal who gives to whom.
+                  </p>
+                </div>
+
+                <div class="d-flex flex-column flex-md-row gap-2">
+                  <button id="btnSortear" class="btn btn-success" type="button">Generate draw</button>
+                  <button id="btnRevelar" class="btn btn-outline-primary" type="button">Reveal all</button>
+                  <button id="btnLimpiarResultados" class="btn btn-outline-danger" type="button">Clear results</button>
+                </div>
+              </div>
+
+              <div id="msgSorteo" class="mt-3"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-lg-4">
+          <div class="card shadow-sm h-100">
+            <div class="card-body p-4">
+              <h2 class="h5 fw-bold mb-3">Rules used</h2>
+
+              <ul class="mb-0">
+                <li>No one can draw themselves</li>
+                <li>Exclusions are respected</li>
+                <li>Results are saved in localStorage</li>
+              </ul>
+
+              <hr />
+
+              <div class="small text-muted">
+                This page can be shown in the video as evidence that the draw logic respects the configured exclusions.
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-lg-8">
+          <div class="card shadow-sm h-100">
+            <div class="card-body p-4">
+              <div class="d-flex justify-content-between align-items-center mb-3">
+                <h2 class="h5 fw-bold mb-0">Draw results</h2>
+                <span id="totalResultados" class="badge text-bg-secondary">0</span>
+              </div>
+
+              <div id="contenedorResultados" class="row g-3"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12">
+          <div class="accordion" id="acordeonDatos">
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="datosHead">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#datosBody"
+                  aria-expanded="false"
+                  aria-controls="datosBody"
+                >
+                  Raw local data (JSON)
+                </button>
+              </h2>
+              <div
+                id="datosBody"
+                class="accordion-collapse collapse"
+                aria-labelledby="datosHead"
+                data-bs-parent="#acordeonDatos"
+              >
+                <div class="accordion-body">
+                  <pre id="rawDrawData" class="mb-0"></pre>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../js/storage.js"></script>
+    <script src="../js/draw.js"></script>
+  </body>
+</html>
