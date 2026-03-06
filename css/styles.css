@@ -1,5 +1,5 @@
 body {
-  min-height: 100vh;
+  background: radial-gradient(900px circle at 20% 10%, #ffffff 0%, #f3f5f7 45%, #eef2f6 100%);
 }
 
 .zona-drop {

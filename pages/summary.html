@@ -27,7 +27,7 @@
               <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-center gap-2">
                 <div>
                   <h1 class="h4 fw-bold mb-1">Summary</h1>
-                  <p class="text-muted mb-0">This view reads data from localStorage on every render.</p>
+                  <p class="text-muted mb-0">This view reads data from localStorage.</p>
                 </div>
 
                 <div class="d-flex gap-2">
@@ -50,42 +50,42 @@
                 <div class="col-12">
                   <div class="border rounded-3 p-3 bg-white">
                     <div class="small text-muted">Organizer</div>
-                    <div id="vOrganizador" class="fw-semibold">-</div>
-                    <div id="vOrganizadorIncluido" class="small text-muted">-</div>
+                    <div id="vOrganizer" class="fw-semibold">-</div>
+                    <div id="vOrganizerIncluded" class="small text-muted">-</div>
                   </div>
                 </div>
 
                 <div class="col-12 col-md-6">
                   <div class="border rounded-3 p-3 bg-white h-100">
                     <div class="small text-muted">Event type</div>
-                    <div id="vTipoEvento" class="fw-semibold">-</div>
+                    <div id="vEventType" class="fw-semibold">-</div>
                   </div>
                 </div>
 
                 <div class="col-12 col-md-6">
                   <div class="border rounded-3 p-3 bg-white h-100">
                     <div class="small text-muted">Celebration name</div>
-                    <div id="vNombreCelebracion" class="fw-semibold">-</div>
+                    <div id="vCelebrationName" class="fw-semibold">-</div>
                   </div>
                 </div>
 
                 <div class="col-12 col-md-6">
                   <div class="border rounded-3 p-3 bg-white h-100">
                     <div class="small text-muted">Date</div>
-                    <div id="vFecha" class="fw-semibold">-</div>
+                    <div id="vDate" class="fw-semibold">-</div>
                   </div>
                 </div>
 
                 <div class="col-12 col-md-6">
                   <div class="border rounded-3 p-3 bg-white h-100">
                     <div class="small text-muted">Budget</div>
-                    <div id="vPresupuesto" class="fw-semibold">-</div>
+                    <div id="vBudget" class="fw-semibold">-</div>
                   </div>
                 </div>
               </div>
 
               <div class="mt-3 small text-muted">
-                Tip: Open DevTools > Application > Local Storage to show evidence in the video.
+                Tip: DevTools -> Application -> Local Storage
               </div>
             </div>
           </div>
@@ -101,9 +101,9 @@
                   <div class="border rounded-3 p-3 bg-white">
                     <div class="d-flex justify-content-between align-items-center">
                       <div class="fw-semibold">Participants</div>
-                      <span id="vParticipantesCount" class="badge text-bg-secondary">0</span>
+                      <span id="vParticipantsCount" class="badge text-bg-secondary">0</span>
                     </div>
-                    <div id="vParticipantes" class="mt-2"></div>
+                    <div id="vParticipants" class="mt-2"></div>
                   </div>
                 </div>
 
@@ -111,9 +111,9 @@
                   <div class="border rounded-3 p-3 bg-white">
                     <div class="d-flex justify-content-between align-items-center">
                       <div class="fw-semibold">Exclusions</div>
-                      <span id="vExclusionesCount" class="badge text-bg-secondary">0</span>
+                      <span id="vExclusionsCount" class="badge text-bg-secondary">0</span>
                     </div>
-                    <div id="vExclusiones" class="mt-2"></div>
+                    <div id="vExclusions" class="mt-2"></div>
                   </div>
                 </div>
               </div>
@@ -127,14 +127,14 @@
         </div>
 
         <div class="col-12">
-          <div class="accordion" id="acordeonRaw">
+          <div class="accordion" id="accRaw">
             <div class="accordion-item">
               <h2 class="accordion-header" id="rawHead">
                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#rawBody" aria-expanded="false" aria-controls="rawBody">
                   Raw local data (JSON)
                 </button>
               </h2>
-              <div id="rawBody" class="accordion-collapse collapse" aria-labelledby="rawHead" data-bs-parent="#acordeonRaw">
+              <div id="rawBody" class="accordion-collapse collapse" aria-labelledby="rawHead" data-bs-parent="#accRaw">
                 <div class="accordion-body">
                   <pre id="vRaw" class="mb-0"></pre>
                 </div>
@@ -148,6 +148,7 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="../js/storage.js"></script>
+    <script src="../js/guards.js"></script>
     <script src="../js/summary.js"></script>
   </body>
 </html>

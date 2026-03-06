@@ -10,25 +10,45 @@
   </head>
 
   <body class="bg-light">
-    <main class="container py-5">
-      <div class="row justify-content-center">
-        <div class="col-12 col-md-8 col-lg-6">
-          <div class="card shadow-sm">
-            <div class="card-body p-4 text-center">
-              <h1 class="fw-bold mb-2">Mini mini AR</h1>
-              <p class="text-muted mb-4">Gift exchange organizer</p>
+    <main class="vh-100 d-flex align-items-center">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-12 col-md-9 col-lg-6">
+            <div class="card shadow-sm border-0 rounded-4 overflow-hidden">
+              <div class="p-5 text-center bg-white">
+                <div class="mx-auto mb-3 d-flex align-items-center justify-content-center border rounded-4 shadow-sm"
+                     style="width:84px;height:84px;background:#f8f9fa;">
+                  <img
+                    src="./assets/logo.png"
+                    alt="App logo"
+                    style="width:46px;height:46px;object-fit:contain;"
+                    onerror="this.style.display='none'"
+                  />
+                </div>
 
-              <div class="d-grid gap-2">
-                <a class="btn btn-primary btn-lg" href="./pages/setup.html">Start setup</a>
-                <button id="btnReiniciar" class="btn btn-outline-danger">Reset local data</button>
+                <h1 class="fw-bold mb-2">Mini mini AR</h1>
+                <p class="text-muted mb-4">
+                  Gift exchange organizer
+                </p>
+
+                <div class="d-grid gap-2">
+                  <a class="btn btn-primary btn-lg rounded-4" href="./pages/setup.html">Start</a>
+                  <button id="btnReiniciar" class="btn btn-outline-danger rounded-4" type="button">
+                    Reset local data
+                  </button>
+                </div>
+
+                <div id="msgReinicio" class="mt-3"></div>
+
+                <div class="mt-4 small text-muted">
+                  Authors: Alexis acosta, Ricardo Figueroa
+                </div>
               </div>
 
-              <div id="msgReinicio" class="mt-3"></div>
+              <div class="px-4 py-3 bg-light border-top text-center small text-muted">
+                Data is stored locally using localStorage
+              </div>
             </div>
-          </div>
-
-          <div class="mt-3 small text-muted text-center">
-            Authors: Alexis acosta, Ricardo Figueroa
           </div>
         </div>
       </div>
@@ -42,7 +62,7 @@
         const msgReinicio = document.getElementById("msgReinicio");
 
         btnReiniciar.addEventListener("click", function () {
-          reiniciarEstado();
+          resetState();
           msgReinicio.innerHTML = '<div class="alert alert-success mb-0">Local data cleared</div>';
         });
       })();
