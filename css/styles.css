@@ -1,5 +1,5 @@
 body {
-  background: radial-gradient(900px circle at 20% 10%, #ffffff 0%, #f3f5f7 45%, #eef2f6 100%);
+  background: radial-gradient(900px circle at 20% 10%, #ffffff 0%, #f3f5f7 45%, #ff4400 140%);
 }
 
 .zona-drop {
@@ -45,4 +45,8 @@ body {
 
 .destino-oculto:hover {
   border-color: #198754;
+}
+
+.custom-bg{
+  background-color: #f86407 !important;
 }
